@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient-colors: hsl(136, 65%, 51%), hsl(192, 70%, 51%);
+    
+}
+html {
+    font-size: 18px;
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Public Sans', sans-serif;
+}
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+li {
+    margin: 0.5rem;
+    cursor: pointer;
+}
+h1, h2, h3 {
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+}
+p {
+    color: hsl(233, 8%, 62%);
+}
+button {
+    background-image: linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    padding: 1rem 2rem;
+    border-radius: 70px;
+    border: none;
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+    width: fit-content;
+    transition: background-image 2s ease-in;
+}
+button:hover {
+    background-image: linear-gradient(45deg, hsl(136, 45%, 71%), hsl(192, 63%, 60%));
+}
+.white-text-logo {
+    fill: white;
+    stroke: white;
+    color: aliceblue;
+    width: 150px;
+}
+
+/* NAVIGATION BAR */
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10000000;
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem 0;
+}
+nav li {
+    color: hsl(233, 8%, 62%);
+    transition: padding 0.2s ease-in;
+}
+nav li:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-image-width: 100%;
+    border-image: linear-gradient(45deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%)) 1;
+    padding-bottom: 12px;
+}   
+
+/* INTRODUCTION SECTION */
+.introduction-div {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 15;
+    width: 100vw;
+}
+.intro-text {
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    height: 800px;
+    align-items: left;
+    justify-content: center;
+    transform: translate(45%, -10%);
+}
+.intro-text * {
+    margin: 1rem;
+}
+.intro-images {
+    width: 60%;
+    height: 60%;
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size:110%;
+    background-position: 110px;
+    z-index: -100;
+    transform: translateX(150px);
+}
+.intro-images img {
+    transform: translate(35%,-13%);
+    z-index: -10;
+}
+
+/* ADVANTAGES SECTION */
+.advantages-div {
+    transform: translateY(-50%);
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(233, 8%, 62%);
+    width: 100vw;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.advantages-heading {
+    text-align: left;
+    margin-left: 11%;
+    padding-top: 10%;
+}
+.advantages-heading h1 {
+    margin-bottom: 1rem;
+}
+.advantages-subdiv {
+    width: 100%;
+    margin: 0 auto;
+}
+.advantages-subdiv .advantages-cards {
+    text-align: center;
+}
+.advantages-cards {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.advantage-card {
+    display: block;
+    padding: 1rem;
+    width: 20%;
+    min-width: 300px;
+    text-align: left;
+}
+.advantage-card * {
+    margin-bottom: 1.5rem;
+}
+
+/* ARTICLES SECTION */
+.articles-section {
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    transform: translateY(-300px);
+    padding: 3rem 0;
+    
+}
+.articles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.article-card {
+    display: flex; 
+    flex-flow: column wrap;
+    min-width: 300px;
+    max-width: 20%;
+    border-radius: 30px;
+    background-color: hsl(233, 8%, 98%);
+    margin: 0 1rem;
+    padding: 0 0.5rem 1rem 0.5rem;
+}
+.article-card h3:hover {
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.article-card * {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.articles img {
+    height: 200px;
+    max-width: 100%;
+    margin-top: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.articles-subwrapper {
+    padding: 0;
+    width: 95%;
+    transform: translateX(80px);
+    margin-left: -50px;
+}
+.articles-subwrapper h1 {
+    margin-left: 7%;
+}
+.author {
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 0;
+    background-color: hsl(233, 26%, 24%);
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem 10rem;
+}
+.logo-and-socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    float: left;
+    margin-right: 3rem;
+}
+.socials img {
+    width: 32px;
+    transition: filter .5s ease-in-out;
+}
+.socials img:hover{
+    cursor: pointer;
+    filter: invert(0) sepia(1) saturate(20) hue-rotate(46.8deg) brightness(0.7);
+}
+.footer-list-1, .footer-list-2 {
+    color: hsl(0, 0%, 98%);
+    display: inline-block;
+    margin: 0 3rem;
+}
+.footer-list-1 ul, .footer-list-2 ul {
+    display: flex;
+    flex-flow: column wrap;
+    list-style: none;
+}
+.footer-list-1 ul li, .footer-list-2 ul li {
+    transition: color .4s ease-in-out;
+}
+.footer-list-1 ul li:hover, .footer-list-2 ul li:hover {
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.footer-right-side {
+    float: right;
+    margin-left: 11rem;
+    text-align: right;
+}
+.footer-right-side button {
+    margin-bottom: 2rem;
+}
+
+/* CREDITS */
+.attribution {
+    background-color: hsl(233, 26%, 24%);
+    color:hsl(136, 65%, 51%);
+    padding: 1rem 0;
+}
+.attribution a {
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 375px) {
+
+    .articles-subwrapper {
+        transform: translateX(0)
+    }
+
+    nav button {
+        display: none;
+    }
+
+    h1,h2,h3 {
+        margin: 2rem 0;
+    }
+
+    * {
+        transform: translate(0, 0);
+        break-inside: avoid;
+        column-count: 1;
+        font-family: 'Public Sans', sans-serif;
+    }
+
+    div {
+        max-width: 374px;
+    }
+
+    .intro-images {
+        display: block;
+        width: 100%;
+        height: auto;        
+
+        transform: scale(0.20);
+        background-image: url("../images/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+
+    .intro-text {
+        transform: translate(0, 0);
+        height: fit-content;
+
+    }
+
+    .advantages-div {
+        transform: translateY(0);
+
+    }
+
+}
